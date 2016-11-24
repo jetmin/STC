@@ -29,6 +29,20 @@ Une arête-temps est un couple $(e,t)$ où $e$ est une arçete de $\mathbb{E}$ e
 
 Nous définissons une relation d'équivalence de connexion sur l'espace $\mathbb{E}\times \mathbb{R}$ de la manière suivante: nous disons que les arêtes-temps $(e,t)$ et $(f,s)$ sont connectés si $e=f$ ou $(s=t$ et $e\sim f)$. Nous notons $(e,t)\sim(f,s)$ si l'une des conditions est vérifiée. Un space-time chemin est une suite d'arête-temps $(e_i,t_i)_{i\geqslant 0}$ telle que pour tout $i\geqslant 0$, $(e_i,t_i)\sim(e_{i+1},t_{i+1})$. 
 
-Nous appelons un space time chemin d'occurrence disjointe de longueur $n$ avec $m$ changement de temps s'il existe $m$ indices $1\leqslant k(1)< k(2) < \dots < k(m) \leqslant n$ telles que les changements de temps arrivent aux instants $t_{k(1)},\dots, t_{k(m)}$
+Nous appelons un space time chemin d'occurrence disjointe de longueur $n$ avec $m$ changement de temps s'il existe $m$ indices $1\leqslant k(1)< k(2) < \dots < k(m) \leqslant n$ telles que:
+\begin{itemize}[label = $\bullet$, leftmargin = *]
+\item Les changements de temps arrivent aux instants $t_{k(1)},\dots, t_{k(m)}$, i.e.
+$$\forall i\in \{1,\dots, m-1\} \qquad e_{k(i)} = e_{k(i)+1} \quad t_{k(i)+1} =\dots = t_{k(i+1)}.
+$$
+\item les arpetes visitées à un temps donné sont 2 à 2 distinctes, i.e.
+$$ \forall i,j \in \{1,\dots, n\} \qquad i\neq j \Rightarrow e_i\neq e_j.
+$$
+\item les fermetures d'arêtes arrivent disjointement, i.e. pour tout $i,j\in \{1,\dots, j\}$, $i<j$ tels que $e_i = e_j$, l'une des 3 conditions suivantes est vérifiée:
+\begin{itemize}
+\item $j=i+1$ et $i\in \{k(1),\dots, k(m)\}$;
+\item $t_i< t_j$ et il existe un instant $s\in ]t_i,t_j[$ tel que $e_j$ est ouverte à $s$;
+\item $t_j< t_i$ et il existe un instant $s\in ]t_j,t_i[$ tel que $e_j$ est ouverte à $s$;
+\end{itemize}
+\end{itemize}
 
 \end{document}
