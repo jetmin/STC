@@ -11,6 +11,7 @@
 \newcounter{thm}
 \newcounter{prop}
 \newcounter{cor}
+\newcounter{algo}
 \frenchbsetup{StandardLists = true}
 
 \makeatletter
@@ -22,7 +23,9 @@
 \newtheorem{pointTS}[def]{Définition}
 \newtheorem{ocdis}[prop]{Proposition}
 \newtheorem{impatient}[def]{Définition}
+\newtheorem{algoimp}[algo]{Algorithme}
 \newtheorem{modifimp}[prop]{Proposition}
+\newtheorem{modocdis}[prop]{Proposition}
 \begin{document}
 \section{Space-time chemin}
 
@@ -83,14 +86,22 @@ Enfin, si $\gamma(\phi)$ visite $e_{N+1}$ uniquement après $t_{N+1}$, nous déf
 Un space-time chemin est dit impatient si toute arête de changement de temps $e_k$ est suivi par une arête $e_{k+2}$ qui change son état à l'instant $t_{k+2}$.
 \end{impatient}
 
-Nous montrons tout space time chemin admet une modification temporelle qui est impatiente. Plus formellement, nous introduisons l'algorithme de modification récursive suivante: soit $(e_1,t_1),\dots,(e_n,t_n)$ un space time chemin, nous allons modifier la première arête $e_1$ du chemin, selon les cas suivants:
+Nous montrons tout space time chemin admet une modification temporelle qui est impatiente. Plus formellement, nous introduisons l'algorithme de modification récursive suivante:
+\begin{algoimp} soit $(e_1,t_1),\dots,(e_n,t_n)$ un space time chemin, nous allons modifier la première arête $e_1$ du chemin, selon les cas suivants:
 \begin{itemize}[label = $\bullet$, leftmargin = *]
 \item si $e_2 \neq e_1$, alors nécessairement $t_1 = t_2$, et nous ne modifions pas $(e_1,t_1)$ et nous recommençons l'algorithme avec le chemin $(e_2,t_2),\dots,(e_n,t_n)$;
 \item  si $t_1< t_2$, soit $\tau_3$ le dernier instant avant $t_2$ où $e_{3}$ se ferme. Si $t_1 \geqslant \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_3,t_1)$; sinon $t_1 < \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_2,\tau_3),(e_3,\tau_3)$ et nous recommençons l'algorithme avec le chemin $(e_3,\tau_3),(e_3,t_3),\dots,(e_n,t_n)$;
-\item si $t_1 > t_2$, soit $\tau_3$ le premier instant après $t_2$ où $e_{3}$ s'ouvre. Si $t_1 \leqslant \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_3,t_1)$; sinon $t_1 > \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_2,\tau_3),(e_3,\tau_3)$ et nous recommençons l'algorithme avec le chemin $(e_3,\tau_3),(e_3,t_3),\dots,(e_n,t_n)$;
+\item si $t_1 > t_2$, soit $\tau_3$ le premier instant après $t_2$ où $e_{3}$ s'ouvre. Si $t_1 \leqslant \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_3,t_1)$; sinon $t_1 > \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_2,\tau_3),(e_3,\tau_3)$ et nous recommençons l'algorithme avec le chemin $(e_3,\tau_3),(e_3,t_3),\dots,(e_n,t_n)$.
 \end{itemize}
+\end{algoimp}
 Nous remarquons que la longueur de chemin non modifié diminue après chaque itération, donc l'algorithme se termine. Par la définition d'un chemin impatient, nous avons directement la propriété suivante:
 \begin{modifimp}
 Soit $(e_1,t_1),\dots,(e_n,t_n)$ un space time chemin, sa modification obtenue selon l'algorithme précédent est impatient.
 \end{modifimp}
+Nous montrons maintenant qu'un chemin d'occurrence disjointe est toujours d'occurrence disjointe après la modification selon l'algorithme.
+\begin{modocdis} Soit $\gamma = (e_1,t_1),\dots,(e_n,t_n)$ un space time chemin d'occurrence disjointe, nous modifions ce chemin selon algorithme 1. Le chemin obtenu est d'occurrence disjointe et impatient.
+\end{modocdis}
+\begin{proof}
+Considérons le cas où $\gamma$ admet $m$ changements de temps. Notons $\gamma'$ le chemin obtenu après la modification et $(e_{k(1)},t_{k(1)}),\dots,(e_{k(m)},t_{k(m)})$ les arêtes-temps où un changement de temps arrive et nous posons $k(0) = 0,k(m+1)=n$. Notons $\gamma_j$ le chemin $(e_{k(j)+1},t_{k(j)+1}),\dots,(e_{k(j+1)},t_{k(j+1)})$ et $\gamma'_j$ la modification de $\gamma_j$. Or $\gamma$ est un chemin d'occurrence disjointe, pour tout $0\leqslant j \leqslant m$, les $\gamma_j$ sont disjoints. Remarquons que pour toute arête $e_i\in \gamma_j$ modifiée par l'algorithme 1, nous ajoutons seulement un instant $t'_i$ où $e_i$ est restée fermée entre $t'_i$ et $t_i$. La condition d'occurrence disjointe est toujours respectée, i.e. pour toute indice $r \neq q$ telle que $e_r = e_q$, il existe un instant $s$ entre $t_r,t_q$ tel que $e_r$ est ouverte à l'instant $s$. D'où le résultat.
+\end{proof}
 \end{document}
