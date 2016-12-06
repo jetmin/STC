@@ -20,6 +20,9 @@
 \makeatother
 
 \newtheorem{pointTS}[def]{Définition}
+\newtheorem{ocdis}[prop]{Proposition}
+\newtheorem{impatient}[def]{Définition}
+\newtheorem{modifimp}[prop]{Proposition}
 \begin{document}
 \section{Space-time chemin}
 
@@ -27,14 +30,15 @@
 Une arête-temps est un couple $(e,t)$ où $e$ est une arçete de $\mathbb{E}$ et $t$ un nombre réel. 
 \end{pointTS}
 
-Nous définissons une relation d'équivalence de connexion sur l'espace $\mathbb{E}\times \mathbb{R}$ de la manière suivante: nous disons que les arêtes-temps $(e,t)$ et $(f,s)$ sont connectés si $e=f$ ou $(s=t$ et $e\sim f)$. Nous notons $(e,t)\sim(f,s)$ si l'une des conditions est vérifiée. Un space-time chemin est une suite d'arête-temps $(e_i,t_i)_{i\geqslant 0}$ telle que pour tout $i\geqslant 0$, $(e_i,t_i)\sim(e_{i+1},t_{i+1})$. 
+Nous définissons une relation d'équivalence de connexion sur l'espace $\mathbb{E}\times \mathbb{R}$ de la manière suivante: nous disons que les arêtes-temps $(e,t)$ et $(f,s)$ sont connectés si $e=f$ ou $(s=t$ et $e\sim f)$. Nous notons $(e,t)\sim(f,s)$ si l'une des conditions est vérifiée. Un space-time chemin est une suite d'arête-temps $(e_i,t_i)_{i\geqslant 0}$ telle que pour tout $i\geqslant 0$, $(e_i,t_i)\sim(e_{i+1},t_{i+1})$. Désormais, nous considérons les space-time chemins simple, i.e. si $e_k = e_{k+1}$ alors, $e_{k+2} \neq e_k$.
 
+Nous considérons le processus de percolation dynamique à temps discret. L'espace des trajectoires 
 Nous appelons un space time chemin d'occurrence disjointe de longueur $n$ avec $m$ changement de temps s'il existe $m$ indices $1\leqslant k(1)< k(2) < \dots < k(m) \leqslant n$ telles que:
 \begin{itemize}[label = $\bullet$, leftmargin = *]
 \item Les changements de temps arrivent aux instants $t_{k(1)},\dots, t_{k(m)}$, i.e.
 $$\forall i\in \{1,\dots, m-1\} \qquad e_{k(i)} = e_{k(i)+1} \quad t_{k(i)+1} =\dots = t_{k(i+1)}.
 $$
-\item les arpetes visitées à un temps donné sont 2 à 2 distinctes, i.e.
+\item les arêtes visitées à un temps donné sont 2 à 2 distinctes, i.e.
 $$ \forall i,j \in \{1,\dots, n\} \qquad i\neq j \Rightarrow e_i\neq e_j.
 $$
 \item les fermetures d'arêtes arrivent disjointement, i.e. pour tout $i,j\in \{1,\dots, j\}$, $i<j$ tels que $e_i = e_j$, l'une des 3 conditions suivantes est vérifiée:
@@ -45,4 +49,48 @@ $$
 \end{itemize}
 \end{itemize}
 
+\begin{ocdis}
+Soit $(e_1,t_1),\dots,(e_N,t_N)$ un space time chemin qui relie $x$ à $y$, il existe une fonction $\phi: \{1,\dots, n\}\rightarrow \{1,\dots, N\}$ strictement croissante telle que $(e_{\phi(1)},t_{\phi(1)}),\dots,(e_{\phi(n)},t_{\phi(n)})$ est un space time chemin d'occurrence disjointe qui relie $x$ à $y$.
+\end{ocdis}
+\begin{proof}
+Nous allons montrer cette proposition par récurrence sur la longueur $N$. Supposons que la proposition est vrai pour tout chemin de longueur inférieur à $N$. Nous considérons maintenant un chemin $$(e_1,t_1),\dots, (e_{N+1},t_{N+1})$$ de longueur $N+1$ qui relie $x$ $y$. S'il existe une indice $i\leqslant N$ telle que $(e_i,t_i) = (e_{N+1},t_{N+1})$ alors le chemin $$(e_1,t_1),\dots,(e_i,t_i)
+$$ est un chemin de longueur $i\leqslant N$ qui relie $x$ à $y$. Par l'hypothèse de récurrence, nous avons un chemin extrait d'occurrence disjointe qui relie $x$ à $y$. 
+S'il existe une indice $1\leqslant i\leqslant N$ telles que $e_i = e_{N+1}$, et $e_{N+1}$ reste fermée entre $t_i$ et $t_{N+1}$, nous considérons le chemin $$(e_1,t_1), \dots, (e_{i},t_{i}), (e_{N+1},t_{N+1})$$ qui est de longueur inférieur à $N$. Nous appliquons l'hypothèse de récurrence à ce chemin et nous obtenons le chemin extrait. Si aucun des cas précédents se présente, nous considérons le chemin $(e_1,t_1),\dots,(e_N,t_N)$ de longueur $N$ et qui relie $x$ à $z$. Par l'hypothèse de récurrence, il existe une fonction strictement croissante $\phi:\{1,\dots,n\}\rightarrow \{1,\dots, N\}$ telle que le chemin extrait $\gamma(\phi) = (e_{\phi(1)},t_{\phi(1)}),\dots,(e_{\phi(n)},t_{\phi(n)})$ est un chemin d'occurrence disjointe qui relie $x$ à $z$. 
+
+Si ce chemin n'emprunte pas l'arête $e_{N+1}$, alors nous posons $\phi(n+1) = N+1$ et nous obtenons le chemin extrait souhaité.
+
+Considérons le cas où $\gamma(\phi)$ emprunte l'arête $e_{N+1}$. Supposons tout d'abord que $\gamma(\phi)$ passe par $e_{N+1}$ avant et après $t_{N+1}$. Nous considérons $t_-$ (resp. $t_+$) le dernier (resp. premier) instant strictement avant (resp. après) $t_{N+1}$ où $\gamma(\phi)$ visite $e_{N+1}$ et soit $j_-$ (resp. $j_+$) l'unique indice telle que $t_{\phi(j_-)}= t_-$ (resp. $t_{\phi(j_+)}= t_+$) et $e_{\phi(j_-)}= e_{N+1}$ (resp. $e_{\phi(j_+)}= e_{N+1}$). Plus formellement, les indices $j_-,j_+$ sont définis par les conditions suivantes:
+\begin{align*}
+{j_-}< t_{N+1}\quad e_{j_-} = e_{N+1}\quad t_{j_-} = \max \big\{\,t_j:1\leqslant j \leqslant N, e_j = e_{N+1}, t_j < t_{N+1}\,\big\}\\
+{j_+}> t_{N+1}\quad e_{j_+} = e_{N+1}\quad t_{j_+} = \min \big\{\,t_j:1\leqslant j \leqslant N, e_j = e_{N+1}, t_j > t_{N+1}\,\big\}
+\end{align*}
+Comme $\gamma(\phi)$ est d'occurrence disjointe qui ne contient pas l'arête temps $(e_{N+1},t_{N+1})$, et qu'aucun de ses changements de temps ne contient pas cette arête-temps, nécessairement, l'arête $e_{N+1}$ doit s'ouvrir dans l'intervalle $]t_{j^-},t_{j^+}[$.
+
+Si l'arête $e_{N+1}$ s'ouvre sur $]t_{j_-},t_{N+1}[$ et sur $]t_{N+1},t_{j_+}[$, nous ajoutons $(e_{N+1},t_{N+1})$ à la fin de $\gamma(\phi)$ et nous obtenons le chemin extrait d'occurrence disjointe qui relie $x$ à $y$.
+
+Si l'arête reste fermée sur $]t_{j_-},t_{N+1}[$, nécessairement, elle s'ouvre sur $]t_{N+1},t_{j_+}[$. Nous considérons le space-time chemin 
+$$(e_{\phi(1)},t_{\phi(1)}), \dots, (e_{\phi(j_-)},t_{\phi(j_-)}),(e_{N+1},t_{N+1}).
+$$
+Ce chemin est d'occurrence disjointe et il relie $x$ à $y$.
+Le cas où $e_{N+1}$ reste fermée sur $]t_{N+1},t_{j_+}[$ se traite de manière similaire en remplaçant $j_-$ par $j_+$.
+
+Maintenant, nous supposons que $\gamma(\phi)$ visite $e_{N+1}$ uniquement avant $t_{N+1}$, nous définissons $j_-$ de la même façon que dans le cas précédent. Si $e_{N+1}$ reste fermée entre $]t_{j_-}, t_{N+1}[$, nous considérons le chemin extrait $$(e_{\phi(1)},t_{\phi(1)}),\dots, (e_{\phi(j_-)},t_{\phi(j_-)}),(e_{N+1},t_{N+1}).$$ Il est d'occurrence disjointe et il relie $x$ à $y$. Si $e_{N+1}$ s'ouvre entre $t_{j_-}$ et $t_{N+1}$, alors le chemin $(e_{\phi(1)},t_{\phi(1)}),\dots, (e_{\phi(n)},t_{\phi(n)}),(e_{N+1},t_{N+1})$ vérifie les conditions voulues.
+
+Enfin, si $\gamma(\phi)$ visite $e_{N+1}$ uniquement après $t_{N+1}$, nous définissons seulement $j_+$ et nous obtenons le chemin extrait voulu de la même manière que le cas précédent.
+\end{proof}
+
+\begin{impatient}
+Un space-time chemin est dit impatient si toute arête de changement de temps $e_k$ est suivi par une arête $e_{k+2}$ qui change son état à l'instant $t_{k+2}$.
+\end{impatient}
+
+Nous montrons tout space time chemin admet une modification temporelle qui est impatiente. Plus formellement, nous introduisons l'algorithme de modification récursive suivante: soit $(e_1,t_1),\dots,(e_n,t_n)$ un space time chemin, nous allons modifier la première arête $e_1$ du chemin, selon les cas suivants:
+\begin{itemize}[label = $\bullet$, leftmargin = *]
+\item si $e_2 \neq e_1$, alors nécessairement $t_1 = t_2$, et nous ne modifions pas $(e_1,t_1)$ et nous recommençons l'algorithme avec le chemin $(e_2,t_2),\dots,(e_n,t_n)$;
+\item  si $t_1< t_2$, soit $\tau_3$ le dernier instant avant $t_2$ où $e_{3}$ se ferme. Si $t_1 \geqslant \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_3,t_1)$; sinon $t_1 < \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_2,\tau_3),(e_3,\tau_3)$ et nous recommençons l'algorithme avec le chemin $(e_3,\tau_3),(e_3,t_3),\dots,(e_n,t_n)$;
+\item si $t_1 > t_2$, soit $\tau_3$ le premier instant après $t_2$ où $e_{3}$ s'ouvre. Si $t_1 \leqslant \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_3,t_1)$; sinon $t_1 > \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_2,\tau_3),(e_3,\tau_3)$ et nous recommençons l'algorithme avec le chemin $(e_3,\tau_3),(e_3,t_3),\dots,(e_n,t_n)$;
+\end{itemize}
+Nous remarquons que la longueur de chemin non modifié diminue après chaque itération, donc l'algorithme se termine. Par la définition d'un chemin impatient, nous avons directement la propriété suivante:
+\begin{modifimp}
+Soit $(e_1,t_1),\dots,(e_n,t_n)$ un space time chemin, sa modification obtenue selon l'algorithme précédent est impatient.
+\end{modifimp}
 \end{document}
