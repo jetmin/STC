@@ -26,11 +26,12 @@
 \newtheorem{algoimp}[algo]{Algorithme}
 \newtheorem{modifimp}[prop]{Proposition}
 \newtheorem{modocdis}[prop]{Proposition}
+\newtheorem{decexp}[thm]{Théorème}
 \begin{document}
 \section{Space-time chemin}
-
+Nous considérons les sommets et les arêtes qui inclus dans une boite $\Lambda(l)$ de taille $2l\times h$.
 \begin{pointTS}
-Une arête-temps est un couple $(e,t)$ où $e$ est une arçete de $\mathbb{E}$ et $t$ un nombre réel. 
+Une arête-temps est un couple $(e,t)$ où $e$ est une arête de $\mathbb{E}$ et $t$ un nombre réel. 
 \end{pointTS}
 
 Nous définissons une relation d'équivalence de connexion sur l'espace $\mathbb{E}\times \mathbb{R}$ de la manière suivante: nous disons que les arêtes-temps $(e,t)$ et $(f,s)$ sont connectés si $e=f$ ou $(s=t$ et $e\sim f)$. Nous notons $(e,t)\sim(f,s)$ si l'une des conditions est vérifiée. Un space-time chemin est une suite d'arête-temps $(e_i,t_i)_{i\geqslant 0}$ telle que pour tout $i\geqslant 0$, $(e_i,t_i)\sim(e_{i+1},t_{i+1})$. Désormais, nous considérons les space-time chemins simple, i.e. si $e_k = e_{k+1}$ alors, $e_{k+2} \neq e_k$.
@@ -104,4 +105,10 @@ Nous montrons maintenant qu'un chemin d'occurrence disjointe est toujours d'occu
 \begin{proof}
 Considérons le cas où $\gamma$ admet $m$ changements de temps. Notons $\gamma'$ le chemin obtenu après la modification et $(e_{k(1)},t_{k(1)}),\dots,(e_{k(m)},t_{k(m)})$ les arêtes-temps où un changement de temps arrive et nous posons $k(0) = 0,k(m+1)=n$. Notons $\gamma_j$ le chemin $(e_{k(j)+1},t_{k(j)+1}),\dots,(e_{k(j+1)},t_{k(j+1)})$ et $\gamma'_j$ la modification de $\gamma_j$. Or $\gamma$ est un chemin d'occurrence disjointe, pour tout $0\leqslant j \leqslant m$, les $\gamma_j$ sont disjoints. Remarquons que pour toute arête $e_i\in \gamma_j$ modifiée par l'algorithme 1, nous ajoutons seulement un instant $t'_i$ où $e_i$ est restée fermée entre $t'_i$ et $t_i$. La condition d'occurrence disjointe est toujours respectée, i.e. pour toute indice $r \neq q$ telle que $e_r = e_q$, il existe un instant $s$ entre $t_r,t_q$ tel que $e_r$ est ouverte à l'instant $s$. D'où le résultat.
 \end{proof}
+
+\section{Décroissance exponentielle}
+Nous démontrons maintenant la décroissance exponentielle de la probabilité d'avoir un space time chemin qui relie deux points de distance $l$. Soit $\gamma_n$ un chemin de longueur $n$ qui relie ces deux points $x$ et $y$, d'après ce qui précède, nous pouvons supposer que ce chemin est d'occurrence disjointe et impatient. Nous avons l'inégalité suivante:
+\begin{decexp} 
+$P(x\text{ connect } y)$
+\end{decexp}
 \end{document}
