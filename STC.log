@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.24)  7 DEC 2016 16:08
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.24)  9 DEC 2016 16:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -783,32 +783,41 @@ T1/cmr/m/n/12 [$, n^^Secessairement, elle s'ouvre sur $]\OML/cmm/m/it/12 t[]; t
 []\OT1/cmr/m/n/12 [$.
  []
 
-[2] [3] [4] (./STC.aux) ) 
+[2] [3]
+Overfull \hbox (14.46976pt too wide) in paragraph at lines 115--116
+[]\OT1/cmr/m/n/12 Notons $(\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )\OML/cmm/m
+/it/12 ; [] ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )$ les 
+ar^etes temps de $\OML/cmm/m/it/12 ^^M$\OT1/cmr/m/n/12 , $\OML/cmm/m/it/12 k\OT
+1/cmr/m/n/12 (1)\OML/cmm/m/it/12 ; [] ; k\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 m\OT
+1/cmr/m/n/12 )$
+ []
+
+[4] [5] (./STC.aux) ) 
 Here is how much of TeX's memory you used:
- 12148 strings out of 493304
- 216383 string characters out of 6139871
- 273817 words of memory out of 5000000
- 15328 multiletter control sequences out of 15000+600000
- 10740 words of font info for 41 fonts, out of 8000000 for 9000
+ 12145 strings out of 493304
+ 216354 string characters out of 6139871
+ 274817 words of memory out of 5000000
+ 15327 multiletter control sequences out of 15000+600000
+ 10039 words of font info for 39 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,12n,55p,934b,206s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb>
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/
-public/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
-amsfonts/symbols/msbm10.pfb>
-Output written on STC.pdf (4 pages, 135771 bytes).
+ 56i,12n,55p,934b,307s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.p
+fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
+/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/typ
+e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msbm10.pfb>
+Output written on STC.pdf (5 pages, 140093 bytes).
 PDF statistics:
- 72 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 75 PDF objects out of 1000 (max. 8388607)
+ 54 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

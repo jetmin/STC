@@ -29,7 +29,7 @@
 \newtheorem{decexp}[thm]{Théorème}
 \begin{document}
 \section{Space-time chemin}
-Nous considérons les sommets et les arêtes qui inclus dans une boite $\Lambda(l)$ de taille $2l\times h$.
+Nous considérons les sommets et les arêtes qui inclus dans une boite $\Lambda(l)$ de taille $2l\times h$. On étudie les space-time chemins fermés dans la boîte formés par la percolation dynamique de paramètre $p$.
 \begin{pointTS}
 Une arête-temps est un couple $(e,t)$ où $e$ est une arête de $\mathbb{E}$ et $t$ un nombre réel. 
 \end{pointTS}
@@ -107,8 +107,11 @@ Considérons le cas où $\gamma$ admet $m$ changements de temps. Notons $\gamma'
 \end{proof}
 
 \section{Décroissance exponentielle}
-Nous démontrons maintenant la décroissance exponentielle de la probabilité d'avoir un space time chemin qui relie deux points de distance $l$. Soit $\gamma_n$ un chemin de longueur $n$ qui relie ces deux points $x$ et $y$, d'après ce qui précède, nous pouvons supposer que ce chemin est d'occurrence disjointe et impatient. Nous avons l'inégalité suivante:
+Nous démontrons maintenant la décroissance exponentielle de la probabilité d'avoir un space time chemin qui relie deux points de distance $l$. Nous notons $A(x,y,n,T)$ l'événement qu'il existe un space-time fermé $\gamma$ de longueur $n$ et de temps de vie $T$ qui relie $x$ et $y$. D'après ce qui précède, nous pouvons supposer que ce chemin est d'occurrence disjointe et impatient. Nous avons l'inégalité suivante:
 \begin{decexp} 
-$P(x\text{ connect } y)$
+$P(A(x,y,n,T))\leqslant C\exp\big(n(\frac{2T}{|\Lambda|}+\frac{1}{2}\ln(3-3p))\big)$ avec $C$ une constante uniforme.
 \end{decexp}
+\begin{proof}
+Notons $(e_1,t_1),\dots,(e_n,t_n)$ les arêtes temps de $\gamma$, $k(1),\dots,k(m)$ les indices de changement de temps a lieu. Notons aussi pour tout $0\leqslant i \leqslant m$, $B_i$ l'événement il existe n chemin fermé qui relie une extrémité de $e_{k(i)}$ à une extrémité de $e_{k(i+1)}$ à l'instant $t_{k(i+1)}$ avec la convention $k(0) = 1$ et $k(m+1)=n$. 
+\end{proof}
 \end{document}
