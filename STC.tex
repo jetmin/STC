@@ -7,11 +7,12 @@
 \usepackage[utf8]{inputenc}
 \usepackage{centernot}
 \usepackage[parfill]{parskip}
-\newcounter{def}
-\newcounter{thm}
-\newcounter{prop}
-\newcounter{cor}
-\newcounter{algo}
+\newcounter{d}
+\newcounter{t}
+\newcounter{p}
+\newcounter{c}
+\newcounter{a}
+\newcounter{l}
 \frenchbsetup{StandardLists = true}
 
 \makeatletter
@@ -20,24 +21,23 @@
 }
 \makeatother
 
-\newtheorem{pointTS}[def]{Définition}
-\newtheorem{ocdis}[prop]{Proposition}
-\newtheorem{impatient}[def]{Définition}
-\newtheorem{algoimp}[algo]{Algorithme}
-\newtheorem{modifimp}[prop]{Proposition}
-\newtheorem{modocdis}[prop]{Proposition}
-\newtheorem{decexp}[thm]{Théorème}
-\begin{document}
-\section{Space-time chemin}
-Nous considérons les sommets et les arêtes qui inclus dans une boite $\Lambda(l)$ de taille $2l\times h$. On étudie les space-time chemins fermés dans la boîte formés par la percolation dynamique de paramètre $p$.
-\begin{pointTS}
-Une arête-temps est un couple $(e,t)$ où $e$ est une arête de $\mathbb{E}$ et $t$ un nombre réel. 
-\end{pointTS}
+\newtheorem{defi}[d]{Définition}
+\newtheorem{prop}[p]{Proposition}
+\newtheorem{algo}[a]{Algorithme}
+\newtheorem{thm}[t]{Théorème}
+\newtheorem{lem}[l]{Lemme}
 
-Nous définissons une relation d'équivalence de connexion sur l'espace $\mathbb{E}\times \mathbb{R}$ de la manière suivante: nous disons que les arêtes-temps $(e,t)$ et $(f,s)$ sont connectés si $e=f$ ou $(s=t$ et $e\sim f)$. Nous notons $(e,t)\sim(f,s)$ si l'une des conditions est vérifiée. Un space-time chemin est une suite d'arête-temps $(e_i,t_i)_{i\geqslant 0}$ telle que pour tout $i\geqslant 0$, $(e_i,t_i)\sim(e_{i+1},t_{i+1})$. Désormais, nous considérons les space-time chemins simple, i.e. si $e_k = e_{k+1}$ alors, $e_{k+2} \neq e_k$.
+\begin{document}
+\section{chemin espace-temps}
+Nous considérons les sommets et les arêtes qui inclus dans une boite $\Lambda(l)$ de taille $2l\times h$. On étudie les chemin espace-tempss fermés dans la boîte formés par la percolation dynamique de paramètre $p$.
+\begin{defi}
+Une arête-temps est un couple $(e,t)$ où $e$ est une arête de $\mathbb{E}$ et $t$ un nombre réel. 
+\end{defi}
+
+Nous définissons une relation d'équivalence de connexion sur l'espace $\mathbb{E}\times \mathbb{R}$ de la manière suivante: nous disons que les arêtes-temps $(e,t)$ et $(f,s)$ sont connectés si $e=f$ ou $(s=t$ et $e\sim f)$. Nous notons $(e,t)\sim(f,s)$ si l'une des conditions est vérifiée. Un chemin espace-temps est une suite d'arête-temps $(e_i,t_i)_{i\geqslant 0}$ telle que pour tout $i\geqslant 0$, $(e_i,t_i)\sim(e_{i+1},t_{i+1})$. Désormais, nous considérons les chemins espace-temps simple, i.e. si $e_k = e_{k+1}$ alors, $e_{k+2} \neq e_k$.
 
 Nous considérons le processus de percolation dynamique à temps discret. L'espace des trajectoires 
-Nous appelons un space time chemin d'occurrence disjointe de longueur $n$ avec $m$ changement de temps s'il existe $m$ indices $1\leqslant k(1)< k(2) < \dots < k(m) \leqslant n$ telles que:
+Nous appelons un chemin espace-temps d'occurrence disjointe de longueur $n$ avec $m$ changement de temps s'il existe $m$ indices $1\leqslant k(1)< k(2) < \dots < k(m) \leqslant n$ telles que:
 \begin{itemize}[label = $\bullet$, leftmargin = *]
 \item Les changements de temps arrivent aux instants $t_{k(1)},\dots, t_{k(m)}$, i.e.
 $$\forall i\in \{1,\dots, m-1\} \qquad e_{k(i)} = e_{k(i)+1} \quad t_{k(i)+1} =\dots = t_{k(i+1)}.
@@ -53,9 +53,9 @@ $$
 \end{itemize}
 \end{itemize}
 
-\begin{ocdis}
-Soit $(e_1,t_1),\dots,(e_N,t_N)$ un space time chemin qui relie $x$ à $y$, il existe une fonction $\phi: \{1,\dots, n\}\rightarrow \{1,\dots, N\}$ strictement croissante telle que $(e_{\phi(1)},t_{\phi(1)}),\dots,(e_{\phi(n)},t_{\phi(n)})$ est un space time chemin d'occurrence disjointe qui relie $x$ à $y$.
-\end{ocdis}
+\begin{prop}
+Soit $(e_1,t_1),\dots,(e_N,t_N)$ un chemin espace-temps qui relie $x$ à $y$, il existe une fonction $\phi: \{1,\dots, n\}\rightarrow \{1,\dots, N\}$ strictement croissante telle que $(e_{\phi(1)},t_{\phi(1)}),\dots,(e_{\phi(n)},t_{\phi(n)})$ est un chemin espace-temps d'occurrence disjointe qui relie $x$ à $y$.
+\end{prop}
 \begin{proof}
 Nous allons montrer cette proposition par récurrence sur la longueur $N$. Supposons que la proposition est vrai pour tout chemin de longueur inférieur à $N$. Nous considérons maintenant un chemin $$(e_1,t_1),\dots, (e_{N+1},t_{N+1})$$ de longueur $N+1$ qui relie $x$ $y$. S'il existe une indice $i\leqslant N$ telle que $(e_i,t_i) = (e_{N+1},t_{N+1})$ alors le chemin $$(e_1,t_1),\dots,(e_i,t_i)
 $$ est un chemin de longueur $i\leqslant N$ qui relie $x$ à $y$. Par l'hypothèse de récurrence, nous avons un chemin extrait d'occurrence disjointe qui relie $x$ à $y$. 
@@ -72,7 +72,7 @@ Comme $\gamma(\phi)$ est d'occurrence disjointe qui ne contient pas l'arête tem
 
 Si l'arête $e_{N+1}$ s'ouvre sur $]t_{j_-},t_{N+1}[$ et sur $]t_{N+1},t_{j_+}[$, nous ajoutons $(e_{N+1},t_{N+1})$ à la fin de $\gamma(\phi)$ et nous obtenons le chemin extrait d'occurrence disjointe qui relie $x$ à $y$.
 
-Si l'arête reste fermée sur $]t_{j_-},t_{N+1}[$, nécessairement, elle s'ouvre sur $]t_{N+1},t_{j_+}[$. Nous considérons le space-time chemin 
+Si l'arête reste fermée sur $]t_{j_-},t_{N+1}[$, nécessairement, elle s'ouvre sur $]t_{N+1},t_{j_+}[$. Nous considérons le chemin espace-temps 
 $$(e_{\phi(1)},t_{\phi(1)}), \dots, (e_{\phi(j_-)},t_{\phi(j_-)}),(e_{N+1},t_{N+1}).
 $$
 Ce chemin est d'occurrence disjointe et il relie $x$ à $y$.
@@ -83,35 +83,94 @@ Maintenant, nous supposons que $\gamma(\phi)$ visite $e_{N+1}$ uniquement avant 
 Enfin, si $\gamma(\phi)$ visite $e_{N+1}$ uniquement après $t_{N+1}$, nous définissons seulement $j_+$ et nous obtenons le chemin extrait voulu de la même manière que le cas précédent.
 \end{proof}
 
-\begin{impatient}
-Un space-time chemin est dit impatient si toute arête de changement de temps $e_k$ est suivi par une arête $e_{k+2}$ qui change son état à l'instant $t_{k+2}$.
-\end{impatient}
+\begin{defi}
+Un chemin espace-temps est dit impatient si toute arête de changement de temps $e_k$ est suivi par une arête $e_{k+2}$ qui change son état à l'instant $t_{k+2}$.
+\end{defi}
 
-Nous montrons tout space time chemin admet une modification temporelle qui est impatiente. Plus formellement, nous introduisons l'algorithme de modification récursive suivante:
-\begin{algoimp} soit $(e_1,t_1),\dots,(e_n,t_n)$ un space time chemin, nous allons modifier la première arête $e_1$ du chemin, selon les cas suivants:
+Nous montrons tout chemin espace-temps admet une modification temporelle qui est impatiente. Plus formellement, nous introduisons l'algorithme de modification récursive suivante:
+\begin{algo} soit $(e_1,t_1),\dots,(e_n,t_n)$ un chemin espace-temps, nous allons modifier la première arête $e_1$ du chemin, selon les cas suivants:
 \begin{itemize}[label = $\bullet$, leftmargin = *]
 \item si $e_2 \neq e_1$, alors nécessairement $t_1 = t_2$, et nous ne modifions pas $(e_1,t_1)$ et nous recommençons l'algorithme avec le chemin $(e_2,t_2),\dots,(e_n,t_n)$;
-\item  si $t_1< t_2$, soit $\tau_3$ le dernier instant avant $t_2$ où $e_{3}$ se ferme. Si $t_1 \geqslant \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_3,t_1)$; sinon $t_1 < \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_2,\tau_3),(e_3,\tau_3)$ et nous recommençons l'algorithme avec le chemin $(e_3,\tau_3),(e_3,t_3),\dots,(e_n,t_n)$;
-\item si $t_1 > t_2$, soit $\tau_3$ le premier instant après $t_2$ où $e_{3}$ s'ouvre. Si $t_1 \leqslant \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_3,t_1)$; sinon $t_1 > \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_2,\tau_3),(e_3,\tau_3)$ et nous recommençons l'algorithme avec le chemin $(e_3,\tau_3),(e_3,t_3),\dots,(e_n,t_n)$.
+\item  si $t_1< t_2$, soit $\tau_3$ le dernier instant avant $t_2$ où $e_{3}$ se ferme. Si $t_1 \geqslant \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_3,t_1)$ et nous recommençons avec le chemin $(e_3,t_1),(e_3,t_3),\dots, (e_n,t_n)$; sinon $t_1 < \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_2,\tau_3),(e_3,\tau_3)$ et nous recommençons l'algorithme avec le chemin $(e_3,\tau_3),(e_3,t_3),\dots,(e_n,t_n)$;
+\item si $t_1 > t_2$, soit $\tau_3$ le premier instant après $t_2$ où $e_{3}$ s'ouvre. Si $t_1 \leqslant \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_3,t_1)$ et nous recommençons avec le chemin $(e_3,t_1),(e_3,t_3),\dots, (e_n,t_n)$; sinon $t_1 > \tau_3$, nous remplaçons $(e_1,t_1),(e_2,t_2)$ par $(e_1,t_1),(e_2,\tau_3),(e_3,\tau_3)$ et nous recommençons l'algorithme avec le chemin $(e_3,\tau_3),(e_3,t_3),\dots,(e_n,t_n)$.
 \end{itemize}
-\end{algoimp}
+\end{algo}
 Nous remarquons que la longueur de chemin non modifié diminue après chaque itération, donc l'algorithme se termine. Par la définition d'un chemin impatient, nous avons directement la propriété suivante:
-\begin{modifimp}
-Soit $(e_1,t_1),\dots,(e_n,t_n)$ un space time chemin, sa modification obtenue selon l'algorithme précédent est impatient.
-\end{modifimp}
+\begin{prop}
+Soit $(e_1,t_1),\dots,(e_n,t_n)$ un chemin espace-temps, sa modification obtenue selon l'algorithme précédent est impatient.
+\end{prop}
 Nous montrons maintenant qu'un chemin d'occurrence disjointe est toujours d'occurrence disjointe après la modification selon l'algorithme.
-\begin{modocdis} Soit $\gamma = (e_1,t_1),\dots,(e_n,t_n)$ un space time chemin d'occurrence disjointe, nous modifions ce chemin selon algorithme 1. Le chemin obtenu est d'occurrence disjointe et impatient.
-\end{modocdis}
+\begin{prop} Soit $\gamma = (e_1,t_1),\dots,(e_n,t_n)$ un chemin espace-temps d'occurrence disjointe, nous modifions ce chemin selon algorithme 1. Le chemin obtenu est d'occurrence disjointe et impatient.
+\end{prop}
 \begin{proof}
-Considérons le cas où $\gamma$ admet $m$ changements de temps. Notons $\gamma'$ le chemin obtenu après la modification et $(e_{k(1)},t_{k(1)}),\dots,(e_{k(m)},t_{k(m)})$ les arêtes-temps où un changement de temps arrive et nous posons $k(0) = 0,k(m+1)=n$. Notons $\gamma_j$ le chemin $(e_{k(j)+1},t_{k(j)+1}),\dots,(e_{k(j+1)},t_{k(j+1)})$ et $\gamma'_j$ la modification de $\gamma_j$. Or $\gamma$ est un chemin d'occurrence disjointe, pour tout $0\leqslant j \leqslant m$, les $\gamma_j$ sont disjoints. Remarquons que pour toute arête $e_i\in \gamma_j$ modifiée par l'algorithme 1, nous ajoutons seulement un instant $t'_i$ où $e_i$ est restée fermée entre $t'_i$ et $t_i$. La condition d'occurrence disjointe est toujours respectée, i.e. pour toute indice $r \neq q$ telle que $e_r = e_q$, il existe un instant $s$ entre $t_r,t_q$ tel que $e_r$ est ouverte à l'instant $s$. D'où le résultat.
+Nous vérifions la condition de l'occurrence disjointe dans chaque étape de l'algorithme. Soit $(e_i,t_i),(e_{i+1},t_{i+1})$ le changement de temps qui est modifié après une itération, et supposons que le chemin visite $e_i$ ou $e_{i+2}$ plus qu'une fois. Nous pouvons aussi supposer que $t_i< t_{i+1}$ car le cas $t_i> t_{i+1}$ se traite de la même manière. Nous examinons les deux résultats de la modification: si nous obtenons $(e_i,t_i),(e_{i+2},t_i)$, il faut simplement vérifier qu'il existe un instant entre chaque visite de $e_{i+2}$ et $t_i$ tel que $e_{i+2}$ est ouverte à cette instant. Or $(e_{i+2},t_{i+2})$ est dans $\gamma$ qui est un chemin d'occurrence disjointe, $e_{i+2}$ admet une ouverture entre les autres instants de visites et $t_{i+2}$. Vu que l'arête $e_{i+2}$ est fermée entre $t_i$ et $t_{i+2}$, de même pour $t_i$. Si nous avons $(e_i,t_i),(e_{i+1},\tau_{i+2}),(e_{i+2},\tau_{i+2})$ après la modification, nous devons vérifier la condition pour $e_i$ et $e_{i+2}$. Nous rappelons que $e_{i+1}= e_i$ et $\tau_{i+2}$ le dernier instant avant $t_{i+1}$ où $e_{i+2}$ se ferme. Or $e_i$ est fermée entre $t_i$ et $\tau_{i+2}$ et $e_{i+2}$ est fermée entre $\tau_{i+2}$ et $t_{i+2}$, nous avons le résultat voulu comme dans le premier cas. 
 \end{proof}
 
 \section{Décroissance exponentielle}
-Nous démontrons maintenant la décroissance exponentielle de la probabilité d'avoir un space time chemin qui relie deux points de distance $l$. Nous notons $A(x,y,n,T)$ l'événement qu'il existe un space-time fermé $\gamma$ de longueur $n$ et de temps de vie $T$ qui relie $x$ et $y$. D'après ce qui précède, nous pouvons supposer que ce chemin est d'occurrence disjointe et impatient. Nous avons l'inégalité suivante:
-\begin{decexp} 
-$P(A(x,y,n,T))\leqslant C\exp\big(n(\frac{2T}{|\Lambda|}+\frac{1}{2}\ln(3-3p))\big)$ avec $C$ une constante uniforme.
-\end{decexp}
+Nous démontrons maintenant la décroissance exponentielle de la probabilité d'avoir un chemin espace-temps qui relie deux points de distance $l$. Nous notons $\smash{x\overset{s,t}{\longleftrightarrow} y}$ l'événement qu'il existe un chemin espace temps fermé qui relie $x$ et $y$ dans un intervalle de temps $[s,t]$.
+Avant d'énoncer l'estimation, nous montrons un lemme combinatoire:
+\begin{lem} Soit $S(n,m)$ l'ensemble de $m$-uplet d'entiers entre $1$ et $n$ croissant qui n'admet pas d'entiers consécutifs $$S(n,m)=\{\,(u_1,\dots,u_m)\in \{1,\dots,n\}^m:\quad \forall 1\leqslant i\leqslant m-1,u_{i+1}>u_i+1 \, \},$$ alors $|S(n,m)| = \binom{n-m+1}{m}$.
+\end{lem}
 \begin{proof}
-Notons $(e_1,t_1),\dots,(e_n,t_n)$ les arêtes temps de $\gamma$, $k(1),\dots,k(m)$ les indices de changement de temps a lieu. Notons aussi pour tout $0\leqslant i \leqslant m$, $B_i$ l'événement il existe n chemin fermé qui relie une extrémité de $e_{k(i)}$ à une extrémité de $e_{k(i+1)}$ à l'instant $t_{k(i+1)}$ avec la convention $k(0) = 1$ et $k(m+1)=n$. 
+Nous considérons l'application suivante:
+$$ \Phi : (u_1,\dots,u_m) \rightarrow (u_1,\dots,u_i-i+1,\dots,u_m-m+1).
+$$
+Il est facile de vérifier que $\Phi$ est une bijection entre $S(n,m)$ et l'ensemble de $m$-uplet strictement croissant entre $1$ et $n-m+1$. Ce dernier est de cardinal $\binom{n-m+1}{m}$.
 \end{proof}
+\begin{thm} Soit $\gamma$ un chemin qui réalise $\smash{x\overset{s,t}{\longleftrightarrow} y}$, et supposons que $\gamma$ est d'occurrence disjointe et impatient. Nous avons:
+$$P\left(\begin{array}{c}
+x\overset{s,t}{\longleftrightarrow} y \text{ par }\gamma\\
+|\gamma| = n
+\end{array}\right) \leqslant C\exp\big(\frac{2n(t-s)}{|\Lambda|}+\frac{n}{2}\ln(3-3p)\big)$$ avec $C$ une constante uniforme.
+\end{thm}
+\begin{proof}
+Notons $(e_1,t_1),\dots,(e_n,t_n)$ les arêtes temps de $\gamma$, $k(1),\dots,k(m)$ les indices de changement de temps a lieu nous notons par convention $k(0) = 1$ et $k(m+1)=n$. Notons aussi pour tout $0\leqslant i \leqslant m$, $\mathcal{E}_i$ l'événement il existe n chemin fermé qui relie une extrémité de $e_{k(i)}$ à une extrémité de $e_{k(i+1)}$ à l'instant $t_{k(i+1)}$, $e_{k(i)}$ reste fermée entre $t_{k(i)}$ et $t_{k(i+1)}$ et $e_{k(i)+2}$ se ferme à l'instant $t_{k(i+1)}$. Nous factorisons la probabilité à l'aide de l'inégalité de BK:
+\begin{align*}
+&P\left(\begin{array}{c}
+x\overset{s,t}{\longleftrightarrow} y \text{ par }\gamma\\
+|\gamma| = n
+\end{array}\right)= \sum_{m=0}^{\lfloor\frac{n}{2}\rfloor}\sum_{1=k(0)<\dots<k(m+1)=n}\sum_{t_{k(1)},\dots,t_{k(m)}}P(\mathcal{E}_0\circ\dots\circ \mathcal{E}_m)\\
+&\leqslant \sum_{m=0}^{\lfloor\frac{n}{2}\rfloor}\sum_{1=k(0)<\dots<k(m+1)=n}\sum_{t_{k(1)},\dots,t_{k(m)}} \prod_{i=0}^mP(\mathcal{E}_i).
+\end{align*}
+Nous calculons maintenant chaque terme $P(\mathcal{E}_i)$ en notant $e_{k(i)}= \langle x_i,y_i\rangle$.
+\begin{align*}
+P(\mathcal{E}_i) &= P\left(\begin{array}{c}
+y_i\longleftrightarrow x_{i+1}\text{ à l'instant }t_{k(i+1)}\\
+e_{k(i)} \text{ reste fermée entre } t_{k(i)} \text{ et } t_{k(i+1)}\\
+e_{k(i)+2} \text{ change d'état à }t_{k(i+1)}
+\end{array}\right)\\
+& \leqslant (3-3p)^{k(i+1)-k(i)-1)}(1-\frac{p}{|\Lambda|})^{|t_{k(i+1)}-t_{k(i)}|}\frac{1}{|\Lambda|}
+\end{align*}
+Nous appliquons la majoration dans la première probabilité et nous avons:
+\begin{multline*}
+P\left(\begin{array}{c}
+x\overset{s,t}{\longleftrightarrow} y \text{ par }\gamma\\
+|\gamma| = n
+\end{array}\right) \leqslant \sum_{m=0}^{\lfloor\frac{n}{2}\rfloor}\sum_{1=k(0)<\dots<k(m+1)=n} \sum_{t_{k(1)},\dots,t_{k(m)}}\\(3-3p)^{n-m}(1-\frac{p}{|\Lambda|})^{\sum_i^{m-1}|t_{k(i+1)}-t_{k(i)}|}\frac{1}{|\Lambda|^m}
+\end{multline*}
+Calculons d'abord le terme qui contient les instants $t_{k(1)},\dots,t_{k(m)}$, en posant $\Delta_i = |t_{k(i+1)}-t_{k(i)}|$:
+$$\sum_{t_{k(1)},\dots,t_{k(m)}}(1-\frac{p}{|\Lambda|})^{\sum_i^{m}|t_{k(i+1)}-t_{k(i)}|} = 2^m(t-s)\sum_{\Delta_1,\dots,\Delta_{m-1}}(1-\frac{p}{|\Lambda|})^{\sum_{i=1}^{m-1}\Delta_i},
+$$
+nous pouvons échanger la somme et le produit et nous obtenons:
+$$\sum_{\Delta_1,\dots,\Delta_{m-1}}(1-\frac{p}{|\Lambda|})^{\sum_{i=1}^{m-1}\Delta_i} = \prod_{i=1}^{m-1}(\sum_{\Delta_i = 1}^{t-s}(1-\frac{p}{|\Lambda|})^{\Delta_i})= \prod_{i=1}^{m-1}\frac{1-(1-\frac{p}{|\Lambda|})^{t-s}}{\frac{p}{|\Lambda|}},
+$$
+or $(1-x)^\alpha \geqslant 1-\alpha x$ pour tout $x>0,\alpha>0$, nous avons 
+$$ \prod_{i=1}^{m-1}\frac{1-(1-\frac{p}{|\Lambda|})^{t-s}}{\frac{p}{|\Lambda|}} \leqslant(t-s)^{m-1}.
+$$
+Nous avons donc
+$$P\left(\begin{array}{c}
+x\overset{s,t}{\longleftrightarrow} y \text{ par }\gamma\\
+|\gamma| = n
+\end{array}\right) \leqslant\sum_{m=0}^{\lfloor\frac{n}{2}\rfloor}\sum_{1=k(0)<\dots<k(m+1)=n} 2^m(3-3p)^{n-m}(t-s)^m\frac{1}{|\Lambda|^m}.
+$$
+Or le nombre de $1\leqslant k(1)< \dots < k(m) \leqslant n$ est $\binom{n-m+1}{m}$ par lemme 1, nous obtenons:
+\begin{align*}P\left(\begin{array}{c}
+x\overset{s,t}{\longleftrightarrow} y \text{ par }\gamma\\
+|\gamma| = n
+\end{array}\right)& \leqslant\sum_{m=0}^{\lfloor\frac{n}{2}\rfloor}\binom{n-m+1}{m} 2^m(3-3p)^{n-m}(t-s)^m\frac{1}{|\Lambda|^m}\\
+& \leqslant (3-3p)^{n/2}\sum_{m=0}^{\lfloor\frac{n}{2}\rfloor}\frac{(2n)^m}{m!|\Lambda|^m}(t-s)^m \\
+&\leqslant \exp\big(\frac{2n(t-s)}{|\Lambda|}+\frac{n}{2}\ln(3-3p)\big)
+\end{align*}
+\end{proof}
+
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.24)  9 DEC 2016 16:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.24)  15 DEC 2016 15:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -639,11 +639,12 @@ Package: centernot 2011/07/11 v1.3 Centers the not symbol horizontally (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/parskip/parskip.sty
 Package: parskip 2001/04/09 non-zero parskip adjustments
 )
-\c@def=\count124
-\c@thm=\count125
-\c@prop=\count126
-\c@cor=\count127
-\c@algo=\count128
+\c@d=\count124
+\c@t=\count125
+\c@p=\count126
+\c@c=\count127
+\c@a=\count128
+\c@l=\count129
  (./STC.aux)
 \openout1 = `STC.aux'.
 
@@ -671,16 +672,16 @@ Package frenchb.ldf Warning: OT1 encoding should not be used for French.
 ABD: EveryShipout initializing macros
 (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count129
+\scratchcounter=\count130
 \scratchdimen=\dimen161
 \scratchbox=\box38
-\nofMPsegments=\count130
-\nofMParguments=\count131
+\nofMPsegments=\count131
+\nofMParguments=\count132
 \everyMPshowfont=\toks39
-\MPscratchCnt=\count132
+\MPscratchCnt=\count133
 \MPscratchDim=\dimen162
-\MPnumerator=\count133
-\makeMPintoPDFobject=\count134
+\MPnumerator=\count134
+\makeMPintoPDFobject=\count135
 \everyMPtoPDFconversion=\toks40
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
@@ -783,8 +784,8 @@ T1/cmr/m/n/12 [$, n^^Secessairement, elle s'ouvre sur $]\OML/cmm/m/it/12 t[]; t
 []\OT1/cmr/m/n/12 [$.
  []
 
-[2] [3]
-Overfull \hbox (14.46976pt too wide) in paragraph at lines 115--116
+[2] [3] [4]
+Overfull \hbox (14.46976pt too wide) in paragraph at lines 127--128
 []\OT1/cmr/m/n/12 Notons $(\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )\OML/cmm/m
 /it/12 ; [] ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )$ les 
 ar^etes temps de $\OML/cmm/m/it/12 ^^M$\OT1/cmr/m/n/12 , $\OML/cmm/m/it/12 k\OT
@@ -792,32 +793,34 @@ ar^etes temps de $\OML/cmm/m/it/12 ^^M$\OT1/cmr/m/n/12 , $\OML/cmm/m/it/12 k\OT
 1/cmr/m/n/12 )$
  []
 
-[4] [5] (./STC.aux) ) 
+[5] [6] (./STC.aux) ) 
 Here is how much of TeX's memory you used:
- 12145 strings out of 493304
- 216354 string characters out of 6139871
- 274817 words of memory out of 5000000
- 15327 multiletter control sequences out of 15000+600000
- 10039 words of font info for 39 fonts, out of 8000000 for 9000
+ 12149 strings out of 493304
+ 216273 string characters out of 6139871
+ 276733 words of memory out of 5000000
+ 15329 multiletter control sequences out of 15000+600000
+ 10740 words of font info for 41 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,12n,55p,934b,307s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,17n,55p,1307b,309s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
-r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
-/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-d
-ist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb>
-Output written on STC.pdf (5 pages, 140093 bytes).
+ex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cme
+x8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb
+></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/
+share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/t
+exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
+/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/sym
+bols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symb
+ols/msbm10.pfb>
+Output written on STC.pdf (6 pages, 166932 bytes).
 PDF statistics:
- 75 PDF objects out of 1000 (max. 8388607)
- 54 compressed objects within 1 object stream
+ 86 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
