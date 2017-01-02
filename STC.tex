@@ -163,20 +163,20 @@ Or le nombre de $1\leqslant k(1)< \dots < k(m) \leqslant n$ est $\binom{n-m+1}{m
 
 Enfin, utilisons la proposition précédente pour obtenir la décroissance en vitesse exponentielle de la probabilité d'avoir un chemin espace temps qui relie deux points de distance $l$.
 \begin{thm} Soit $x,y$ deux points de distance $l$ et $t$ un instant. Alors 
-$$P(x\overset{0,t}{\longleftrightarrow} y)\leqslant \exp\big(-C(p)l\big)
-$$pour tout $p > \tilde{p}$ où $\tilde{p}$ une constante arbitraire. De plus, $C(p)$ est une constante positive qui tend vers infini quand $p$ tends vers 1.
+$$P(x\overset{0,t}{\longleftrightarrow} y)\leqslant \exp\big(-c(p)l\big)
+$$pour tout $p > \tilde{p}$ où $\tilde{p}$ une constante strictement inférieure à 1. De plus, $c(p)$ est une constante positive qui tend vers infini quand $p$ tends vers 1.
 \end{thm}
 \begin{proof}
-Remarquons d'abord qu'un chemin espace-temps qui relie $x,y$ est nécessairement de longueur supérieure à $l$. De plus nous pouvons extraire un chemin d'occurrence disjointe et impatient à partir de ce chemin qui relie aussi et $x,y$ entre $0$ et $t$. Or la probabilité qu'un chemin qui vit un temps $t$ est bornée par $\exp(-c(p)t)$, nous pouvons considérer le cas où $t\leqslant \kappa l \leqslant \kappa |\Lambda|$ avec $\kappa$ une constante arbitraire strictement positive.  Nous avons l'inégalité suivante:
+Remarquons d'abord qu'un chemin espace-temps qui relie $x,y$ est nécessairement de longueur supérieure à $l$. De plus nous pouvons extraire un chemin d'occurrence disjointe et impatient à partir de ce chemin qui relie aussi et $x,y$ entre $0$ et $t$. Or la probabilité qu'un chemin qui vit un temps $t$ est bornée par $\exp(-c'(p)t)$, nous pouvons considérer le cas où $t\leqslant \kappa l \leqslant \kappa |\Lambda|$ avec $\kappa$ une constante arbitraire strictement positive.  Nous avons l'inégalité suivante:
 \begin{align*}
-P(x\overset{0,t}{\longleftrightarrow}& y)=P\left(\begin{array}{c}x\overset{0,t}{\longleftrightarrow} y\text{ par }\gamma\\\gamma \text{ d'occurrence disjointe et impatient}\\ t \leqslant \kappa l\end{array}\right) + \exp(-c(p)\kappa l)\\
-\leqslant& \sum_{n\geqslant l}P\left(\begin{array}{c}x\overset{0,t}{\longleftrightarrow} y\text{ par }\gamma\\\gamma \text{ d'occurrence disjointe et impatient}\\ |\gamma| = n, t \leqslant \kappa l\end{array}\right)+ + \exp(-c(p)\kappa l)\\
-\leqslant& \sum_{n\geqslant l} \exp\big(2n\kappa+\frac{n}{2}\ln(3-3p)\big) + \exp(-c(p)\kappa l).
+P(x\overset{0,t}{\longleftrightarrow}& y)=P\left(\begin{array}{c}x\overset{0,t}{\longleftrightarrow} y\text{ par }\gamma\\\gamma \text{ d'occurrence disjointe et impatient}\\ t \leqslant \kappa l\end{array}\right) + \exp(-c'(p)\kappa l)\\
+\leqslant& \sum_{n\geqslant l}P\left(\begin{array}{c}x\overset{0,t}{\longleftrightarrow} y\text{ par }\gamma\\\gamma \text{ d'occurrence disjointe et impatient}\\ |\gamma| = n, t \leqslant \kappa l\end{array}\right)+ + \exp(-c'(p)\kappa l)\\
+\leqslant& \sum_{n\geqslant l} \exp\big(2n\kappa+\frac{n}{2}\ln(3-3p)\big) + \exp(-c'(p)\kappa l).
 \end{align*}
 Nous posons $\tilde{p}$ telle que $\kappa+\frac{\ln(3-3\tilde{p})}{2} = 0$. Nous avons donc pour tout $p>\tilde{p}$
-\begin{multline*} \sum_{n\geqslant l} \exp\big(2n\kappa+\frac{n}{2}\ln(3-3p)\big) + \exp(-c(p)\kappa l) \\
-\leqslant \frac{\exp(l(\kappa+\frac{\ln(3-3p)}{2}))}{1-\exp(\kappa+\frac{\ln(3-3p)}{2})}+\exp(-c(p)\kappa l)\leqslant \exp(-C(p)l)
+\begin{multline*} \sum_{n\geqslant l} \exp\big(2n\kappa+\frac{n}{2}\ln(3-3p)\big) + \exp(-c'(p)\kappa l) \\
+\leqslant \frac{\exp(l(\kappa+\frac{\ln(3-3p)}{2}))}{1-\exp(\kappa+\frac{\ln(3-3p)}{2})}+\exp(-c'(p)\kappa l)\leqslant \exp(-c(p)l)
 \end{multline*}
-où nous posons $$C(p) = \frac{\min(c(p),-\kappa-\frac{\ln(3-3p)}{2})}{2}$$ qui tend vers infini quand $p$ tend vers 1.
+où nous posons $$C(p) = \frac{\min(c'(p),-\kappa-\frac{\ln(3-3p)}{2})}{2}$$ qui tend vers infini quand $p$ tend vers 1.
 \end{proof}
 \end{document}
