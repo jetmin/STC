@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.24)  2 JAN 2017 15:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.24)  5 JAN 2017 15:36
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -746,16 +746,18 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 32.
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 )
-Overfull \hbox (8.9602pt too wide) in paragraph at lines 47--48
-[]\OT1/cmr/m/n/12 Les fer-me-tures d'ar^etes ar-rivent dis-join-te-ment, i.e, p
-our tout $\OML/cmm/m/it/12 i; j \OMS/cmsy/m/n/12 2 f\OT1/cmr/m/n/12 1\OML/cmm/m
-/it/12 ; [] ; j\OMS/cmsy/m/n/12 g$\OT1/cmr/m/n/12 ,
+Overfull \hbox (9.4297pt too wide) detected at line 46
+\OMS/cmsy/m/n/12 8\OML/cmm/m/it/12 i \OMS/cmsy/m/n/12 2 f\OT1/cmr/m/n/12 1\OML/
+cmm/m/it/12 ; [] ; m \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 1\OMS/cmsy/m/n/12 g \
+OML/cmm/m/it/12 e[] \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 e[][]t[] \OMS/cmsy/m/n/1
+2 6\OT1/cmr/m/n/12 = \OML/cmm/m/it/12 t[] t[] \OT1/cmr/m/n/12 = [] = \OML/cmm/m
+/it/12 t[]:
  []
 
 [1
 
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-Overfull \hbox (0.42833pt too wide) in paragraph at lines 61--62
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
+Overfull \hbox (0.42833pt too wide) in paragraph at lines 68--68
 \OT1/cmr/m/n/12 est un che-min de lon-gueur $\OML/cmm/m/it/12 i \U/msa/m/n/12 6
  \OML/cmm/m/it/12 N$ \OT1/cmr/m/n/12 qui re-lie $\OML/cmm/m/it/12 x$ \OT1/cmr/m
 /n/12 ^^Ra $\OML/cmm/m/it/12 y$\OT1/cmr/m/n/12 . Par l'hy-poth^^Rese de r^^Secu
@@ -763,22 +765,12 @@ rrence,
  []
 
 
-Overfull \hbox (6.50117pt too wide) in paragraph at lines 68--68
+Overfull \hbox (6.50117pt too wide) in paragraph at lines 74--74
 [] 
  []
 
-[2]
-Overfull \hbox (2.52473pt too wide) in paragraph at lines 86--87
-\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \
-OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 pa
-r $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 
-; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; ^^\[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12
- ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; ^^\[]\OT1/cmr/m/n/12 )$\OT1/cmr/m/it/
-12 . Nous re-com-men^^Xcons l'al-go-rithme
- []
-
 [3]
-Overfull \hbox (2.52473pt too wide) in paragraph at lines 87--88
+Overfull \hbox (2.52473pt too wide) in paragraph at lines 88--89
 \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \
 OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 pa
 r $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 
@@ -787,38 +779,29 @@ r $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12
 12 . Nous re-com-men^^Xcons l'al-go-rithme
  []
 
-[4]
-Overfull \hbox (11.60455pt too wide) detected at line 120
-\OML/cmm/m/it/12 P [] \U/msa/m/n/12 6 [] []
+
+Overfull \hbox (2.52473pt too wide) in paragraph at lines 89--90
+\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 ; \
+OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )$ \OT1/cmr/m/it/12 pa
+r $\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; t[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12 
+; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; ^^\[]\OT1/cmr/m/n/12 )\OML/cmm/m/it/12
+ ; \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 e[]; ^^\[]\OT1/cmr/m/n/12 )$\OT1/cmr/m/it/
+12 . Nous re-com-men^^Xcons l'al-go-rithme
  []
 
-[5]
-Overfull \hbox (9.86838pt too wide) in paragraph at lines 128--130
+[4] [5]
+Overfull \hbox (9.85457pt too wide) detected at line 122
+\OML/cmm/m/it/12 P [] \U/msa/m/n/12 6 [] [] \OML/cmm/m/it/12 :
+ []
+
+
+Overfull \hbox (9.86838pt too wide) in paragraph at lines 130--132
 \OT1/cmr/m/n/12 Nous ^^Setudions main-te-nant chaque terme $\OML/cmm/m/it/12 P\
 OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 E[]\OT1/cmr/m/n/12 )$. Nous no-tons $\OML/cmm/
 m/it/12 x[]; y[]$ \OT1/cmr/m/n/12 les extr^^Semit^^Ses
  []
 
-
-Overfull \hbox (6.67618pt too wide) in paragraph at lines 145--146
-\OML/cmm/m/it/12 t[]; [] ; t[]$ \OT1/cmr/m/n/12 est d^^Setermin^^See par la don
-n^^See de $\OML/cmm/m/it/12 t[]$\OT1/cmr/m/n/12 , les va-leurs de $^^A[]\OML/cm
-m/m/it/12 ; [] ; \OT1/cmr/m/n/12 ^^A[]$
- []
-
-
-Overfull \hbox (24.8936pt too wide) detected at line 147
-[]\OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ []\OT1/cmr/m/n/12 )[] = 2[](\OML/cmm/
-m/it/12 t \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12 s\OT1/cmr/m/n/12 ) [](1 \OMS/cm
-sy/m/n/12 ^^@ []\OT1/cmr/m/n/12 )[]\OML/cmm/m/it/12 :
- []
-
-[6] [7]
-Overfull \hbox (3.7202pt too wide) in paragraph at lines 175--175
-[] 
- []
-
-[8] (./STC.aux) ) 
+[6] [7] [8] [9] (./STC.aux) ) 
 Here is how much of TeX's memory you used:
  12149 strings out of 493304
  216273 string characters out of 6139871
@@ -826,26 +809,26 @@ Here is how much of TeX's memory you used:
  15329 multiletter control sequences out of 15000+600000
  10740 words of font info for 41 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,17n,55p,1434b,327s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.p
-fb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></u
-sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texli
-ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols
-/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/
-msbm10.pfb>
-Output written on STC.pdf (8 pages, 174990 bytes).
+ 56i,17n,55p,1429b,253s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cme
+xtra/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pf
+b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr
+/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/publi
+c/amsfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfo
+nts/symbols/msbm10.pfb>
+Output written on STC.pdf (9 pages, 177217 bytes).
 PDF statistics:
- 94 PDF objects out of 1000 (max. 8388607)
- 68 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 70 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
