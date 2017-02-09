@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.24)  13 JAN 2017 17:40
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.6.24)  23 JAN 2017 11:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -748,15 +748,15 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 ) [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-Overfull \hbox (0.42833pt too wide) in paragraph at lines 68--68
+Overfull \hbox (0.42833pt too wide) in paragraph at lines 80--80
 \OT1/cmr/m/n/12 est un che-min de lon-gueur $\OML/cmm/m/it/12 i \U/msa/m/n/12 6
  \OML/cmm/m/it/12 N$ \OT1/cmr/m/n/12 qui re-lie $\OML/cmm/m/it/12 x$ \OT1/cmr/m
 /n/12 ^^Ra $\OML/cmm/m/it/12 y$\OT1/cmr/m/n/12 . Par l'hy-poth^^Rese de r^^Secu
 rrence,
  []
 
-[3] [4] [5] [6]
-Overfull \hbox (0.91977pt too wide) detected at line 144
+[3] [4] [5] [6] [7]
+Overfull \hbox (0.91977pt too wide) detected at line 161
  []$[]  \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OMS/cmsy/m/n/12 E[] ^^N [] ^^N E[]\
 OT1/cmr/m/n/12 ) \U/msa/m/n/12 6 []\OT1/cmr/m/n/12 (3 \OMS/cmsy/m/n/12 ^^@ \OT1
 /cmr/m/n/12 3\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 )[] [][] []\OML/cmm/m/it/12 :  $
@@ -764,41 +764,41 @@ OT1/cmr/m/n/12 ) \U/msa/m/n/12 6 []\OT1/cmr/m/n/12 (3 \OMS/cmsy/m/n/12 ^^@ \OT1
  []
 
 
-Overfull \hbox (13.88028pt too wide) in paragraph at lines 146--147
+Overfull \hbox (13.88028pt too wide) in paragraph at lines 163--164
 \OT1/cmr/m/n/12 Si $\OML/cmm/m/it/12 m$ \OT1/cmr/m/n/12 et les in-dices $\OML/c
 mm/m/it/12 k\OT1/cmr/m/n/12 (1)\OML/cmm/m/it/12 ; [] ; k\OT1/cmr/m/n/12 (\OML/c
 mm/m/it/12 m\OT1/cmr/m/n/12 )$ sont fix^^Ses, la suite $\OML/cmm/m/it/12 t[]; [
 ] ; t[]$ \OT1/cmr/m/n/12 est d^^Setermin^^See
  []
 
-[7] [8] [9] (./STC.aux) ) 
+[8] [9] [10] (./STC.aux) ) 
 Here is how much of TeX's memory you used:
- 12151 strings out of 493304
- 216285 string characters out of 6139871
- 274749 words of memory out of 5000000
- 15331 multiletter control sequences out of 15000+600000
+ 12153 strings out of 493304
+ 216305 string characters out of 6139871
+ 274765 words of memory out of 5000000
+ 15333 multiletter control sequences out of 15000+600000
  10740 words of font info for 41 fonts, out of 8000000 for 9000
  957 hyphenation exceptions out of 8191
- 56i,17n,55p,1521b,277s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextra
-/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
-/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
-symbols/msbm10.pfb>
-Output written on STC.pdf (9 pages, 180437 bytes).
+ 56i,17n,55p,1534b,307s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cmextr
+a/cmex8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi1
+2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/tex
+live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/p
+ublic/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/a
+msfonts/cm/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb>
+Output written on STC.pdf (10 pages, 184482 bytes).
 PDF statistics:
- 97 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 100 PDF objects out of 1000 (max. 8388607)
+ 72 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
