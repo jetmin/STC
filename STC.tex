@@ -123,13 +123,12 @@ Nous considérons l'application
 $$ \Phi : (u_1,\dots,u_m) \rightarrow (u_1,\dots,u_i-i+1,\dots,u_m-m+1).
 $$
 L'application $\Phi$ est une bijection de $S(n,m)$ sur l'ensemble des $m$-uplets d'entiers strictement croissants entre $1$ et $n-m+1$, i.e.,
-$$ \big\{(u_1,\dots,u_m)\in \{1,\dots, n-m+1\}^m:\, u_{i+1}> u_i, \quad 1\leqslant i \leqslant m-1\big\}.
+$$ \large\{(u_1,\dots,u_m)\in \{1,\dots, n-m+1\}^m:\, u_{i+1}> u_i, \quad 1\leqslant i \leqslant m-1\large\}.
 $$ Ce dernier ensemble est de cardinal $\binom{n-m+1}{m}$.
 \end{proof}
 
 Nous énonçons maintenant notre estimée centrale.
-\begin{prop} En 
-$x,y$ deux points fixés dans $\Lambda$. Alors, pour $p>\frac{2}{3}$,
+\begin{prop} Soient $x,y$ deux points fixés dans $\Lambda$. Alors, pour $p>\frac{2}{3}$,
 \begin{multline*}\forall s,t \in \mathbb{N}, \quad s<t, \quad \forall n \geqslant |x-y|_1,\\ P\left(\begin{array}{c}
 \text{il existe un chemin espace-temps }\gamma\\ \text{ de longueur } n\text{ qui relie }x\text{ à }y \text{ entre }s\text{ et }t
 \end{array}\right)\\  \leqslant \exp\left(\frac{2n(t-s)}{|\Lambda|}+\frac{n}{2}\ln(3-3p)\right).
@@ -138,7 +137,7 @@ $x,y$ deux points fixés dans $\Lambda$. Alors, pour $p>\frac{2}{3}$,
 \begin{proof}
 Fixons $s,t\in \mathbb{N}$ avec $s< t$ et $n\geqslant |x-y|_1$ et notons $\mathcal{E}$ l'événement à estimer. Supposons que $\mathcal{E}$ arrive et soit 
 $$\gamma= x_1,(e_1,t_1), y_1, x_2,(e_2,t_2),\dots,x_n,(e_n,t_n),y_n$$ un chemin espace-temps qui le réalise. Par les propositions \ref{ocdis} et \ref{imp}, nous pouvons supposer que $\gamma$ est d'occurrence disjointe et impatient. Notons $$k(1),\dots,k(m)$$ les indices où les changements de temps ont lieu dans $\gamma$. Par définition, nous avons 
-$t_{k(i)+1} = t_{k(i+1)}$ pour $1\leqslant i \leqslant m$. Par convention, nous posons $k(0) = 1$ et $k(m+1)=n$. Quitte à arrêter $\gamma$ à l'instant où il visite $y$ pour la première fois, nous pouvons supposer que $\gamma$ ne se termine pas par un changement de temps, de sorte que $k(m)< n-1$. Pour $0\leqslant i \leqslant m$, nous notons $\mathcal{E}_i$ l'événement: il existe un chemin fermé qui relie $y_{k(i)}$ à $x_{k(i+1)}$  à l'instant $t_{k(i+1)}$, $e_{k(i)}$ reste fermée entre $t_{k(i)}$ et $t_{k(i+1)}$ et $e_{k(i)+2}$ se ferme à l'instant $t_{k(i+1)}$. Nous conditionnons $\mathcal{E}$ selon le nombre et les instants de changements de temps, puis nous factorisons la probabilité à l'aide de l'inégalité de BK:
+$t_{k(i)+1} = t_{k(i+1)}$ pour $1\leqslant i \leqslant m$. Par convention, nous posons $k(0) = 1$ et $k(m+1)=n$. Quitte à arrêter $\gamma$ à l'instant où il visite $y$ pour la première fois, nous pouvons supposer que $\gamma$ ne se termine pas par un changement de temps, de sorte que $k(m)< n-1$. Pour $0\leqslant i \leqslant m$, nous notons $\mathcal{E}_i$ l'événement: il existe un chemin fermé qui relie $y_{k(i)}$ à $x_{k(i+1)}$  à l'instant $t_{k(i+1)}$, l'arête $e_{k(i)}$ reste fermée entre $t_{k(i)}$ et $t_{k(i+1)}$ et $e_{k(i)+2}$ se ferme à l'instant $t_{k(i+1)}$. Nous conditionnons $\mathcal{E}$ selon le nombre et les instants de changements de temps, puis nous factorisons la probabilité à l'aide de l'inégalité de BK:
 \begin{multline*}
 P(\mathcal{E})
 = \sum_{0\leqslant m \leqslant n/2}\sum_{1\leqslant k(1)<\dots<k(m)\leqslant n}\sum_{t_{k(1)},\dots,t_{k(m)}}P(\mathcal{E}_0\circ\dots\circ \mathcal{E}_m)\\
@@ -157,42 +156,43 @@ De plus, à chaque instant $t$, nous choisissons une arête uniformément parmi 
 $$P(\mathcal{E}_i)\leqslant (3-3p)^{k(i+1)-k(i)-1}\left(1-\frac{p}{|\Lambda|}\right)^{|t_{k(i+1)}-t_{k(i)}|}\frac{1}{|\Lambda|}.$$
 Nous injectons cette majoration dans la somme précédente et nous obtenons
 \begin{multline*}
-P(\mathcal{E}_0\circ\dots\circ \mathcal{E}_m) \leqslant \sum_{i\in \{0,\dots,m-1\}}(3-3p)^{n-m}\left(1-\frac{p}{|\Lambda|}\right)^{\displaystyle \sum_{i=1}^{m}|t_{k(i+1)}-t_{k(i)}|}\frac{1}{|\Lambda|^m}.
+P(\mathcal{E}) \leqslant \sum_{0\leqslant m \leqslant n/2}\sum_{1\leqslant k(1)<\dots<k(m)\leqslant n}\sum_{t_{k(1)},\dots,t_{k(m)}}\\(3-3p)^{n-m}\left(1-\frac{p}{|\Lambda|}\right)^{\displaystyle \sum_{i=1}^{m}|t_{k(i+1)}-t_{k(i)}|}\frac{1}{|\Lambda|^m}.
 \end{multline*}
 
-Calculons d'abord la somme sur les instants $t_{k(1)},\dots,t_{k(m)}$. Posons $$\Delta_i = |t_{k(i+1)}-t_{k(i)}|.$$ Si $m$ et les indices $k(1),\dots,k(m)$ sont fixés, la suite $t_{k(1)},\dots,t_{k(m)}$ est déterminée par les valeurs $\Delta_0,\dots,\Delta_{m-1}$ et les signes des différences $t_{k(i+1)}-t_{k(i)}$, d'où $0\leqslant i < m$
-\begin{multline*}\sum_{t_{k(1)},\dots,t_{k(m)}}\left(1-\frac{p}{|\Lambda|}\right)^{\displaystyle\sum_{i=1}^{m}|t_{k(i+1)}-t_{k(i)}|} \\ = 2^{m}(t-s)\sum_{1\leqslant\Delta_0,\dots,\Delta_{m-1}\leqslant t-s}\left(1-\frac{p}{|\Lambda|}\right)^{\Delta_1+\dots+\Delta_{m-1}}.
+Calculons d'abord la somme sur les instants $t_{k(1)},\dots,t_{k(m)}$. Posons $$\forall i \in\{0,\dots,m\}\quad\Delta_i = |t_{k(i+1)}-t_{k(i)}|.$$ Si $m$ et les indices $k(1),\dots,k(m)$ sont fixés, la suite $t_{k(1)},\dots,t_{k(m)}$ est déterminée par les valeurs $\Delta_0,\dots,\Delta_{m-1}$ et les signes des différences $t_{k(i+1)}-t_{k(i)}$, d'où 
+\begin{multline*}\sum_{t_{k(1)},\dots,t_{k(m)}}\left(1-\frac{p}{|\Lambda|}\right)^{\displaystyle\sum_{i=1}^{m}|t_{k(i+1)}-t_{k(i)}|} \\ = 2^{m}(t-s)\sum_{1\leqslant\Delta_1,\dots,\Delta_{m-1}\leqslant t-s}\left(1-\frac{p}{|\Lambda|}\right)^{\Delta_1+\dots+\Delta_{m-1}}.
 \end{multline*}
 Nous échangeons la somme et le produit et nous obtenons
-\begin{multline*}\sum_{1\leqslant\Delta_0,\dots,\Delta_{m-1}\leqslant t-s}\left(1-\frac{p}{|\Lambda|}\right)^{\sum_{i=1}^{m-1}\Delta_i} = \prod_{i=0}^{m-1}\left(\sum_{\Delta_i = 1}^{t-s}\left(1-\frac{p}{|\Lambda|}\right)^{\Delta_i}\right)\\= \prod_{i=0}^{m-1}\left(1-\frac{p}{|\Lambda|}\right)\frac{\displaystyle1-\left(1-\frac{p}{|\Lambda|}\right)^{t-s}}{\displaystyle\frac{p}{|\Lambda|}}\leqslant \prod_{i=0}^{m-1}\frac{\displaystyle1-\left(1-\frac{p}{|\Lambda|}\right)^{t-s}}{\displaystyle\frac{p}{|\Lambda|}}.
+\begin{multline*}\sum_{1\leqslant\Delta_1,\dots,\Delta_{m-1}\leqslant t-s}\left(1-\frac{p}{|\Lambda|}\right)^{\Delta_1+\dots+\Delta_{m-1}} = \prod_{i=1}^{m-1}\left(\sum_{\Delta_i = 1}^{t-s}\left(1-\frac{p}{|\Lambda|}\right)^{\Delta_i}\right)\\= \prod_{i=1}^{m-1}\left(1-\frac{p}{|\Lambda|}\right)\frac{\displaystyle1-\left(1-\frac{p}{|\Lambda|}\right)^{t-s}}{\displaystyle\frac{p}{|\Lambda|}}\leqslant \prod_{i=1}^{m-1}\frac{\displaystyle1-\left(1-\frac{p}{|\Lambda|}\right)^{t-s}}{\displaystyle\frac{p}{|\Lambda|}}.
 \end{multline*}
 Comme $(1-x)^\alpha \geqslant 1-\alpha x$ pour $0<x<1$ et $\alpha\geqslant 1$, nous avons 
-$$ \prod_{i=0}^{m-1}\frac{\displaystyle 1-\left(1-\frac{p}{|\Lambda|}\right)^{t-s}}{\displaystyle\frac{p}{|\Lambda|}} \leqslant(t-s)^{m-1}.
+$$ \prod_{i=1}^{m-1}\frac{\displaystyle 1-\left(1-\frac{p}{|\Lambda|}\right)^{t-s}}{\displaystyle\frac{p}{|\Lambda|}} \leqslant(t-s)^{m-1}.
 $$
 Nous avons donc
 $$P(\mathcal{E}) \leqslant\sum_{0\leqslant m \leqslant n/2}\sum_{1\leqslant k(1)<\dots<k(m)<n} 2^{m}(3-3p)^{n-m}(t-s)^m\frac{1}{|\Lambda|^m}.
 $$
-Or, d'après le lemme 1, le nombre de termes dans la seconde somme est $\binom{n-m+1}{m}$, donc pour $p> \frac{2}{3}$
+Or, d'après le lemme 1, le nombre de termes dans la seconde somme est $\binom{n-m+1}{m}$, donc pour $p> \frac{2}{3}$,
 \begin{align*}P\left(\mathcal{E}\right)& \leqslant\sum_{0\leqslant m \leqslant\frac{n}{2}}\binom{n-m+1}{m} 2^{m}(3-3p)^{n-m}(t-s)^m\frac{1}{|\Lambda|^m}\\
 & \leqslant (3-3p)^{n/2}\sum_{0\leqslant m \leqslant\frac{n}{2}}\frac{(2n)^m}{m!|\Lambda|^m}(t-s)^m \\
 &\leqslant \exp\left(\frac{2n(t-s)}{|\Lambda|}+\frac{n}{2}\ln(3-3p)\right).
 \end{align*}
 Nous avons ainsi l'inégalité voulue.
 \end{proof}
-
-Enfin, nous utilisons la proposition précédente pour montrer que de la probabilité d'avoir un chemin espace-temps qui relie deux points de distance $l$ décroit exponentiellement avec $l$.
+Nous montrons maintenant un estimée sur le comportement temporel d'un chemin espace-temps. Nous disons qu'un chemin $(e_1,t_1),\dots,(e_n,t_n)$ a un temps de vie plus grand que $T\geqslant 0$ si $$ \max(t_1,t_n) -\min(t_1,t_n)\geqslant T.
+$$
+Enfin, nous utilisons la proposition précédente pour montrer que de la probabilité d'avoir un chemin espace-temps qui relie deux points à distance $l$ décroit exponentiellement avec $l$.
 \begin{thm} Il existe $\tilde{p}< 1$ tel que 
-$$\forall p > \tilde{p},\, \forall x,y \in \Lambda,\, \forall t \geqslant 0\quad P(x\overset{0,t}{\longleftrightarrow} y)\leqslant \exp\big(-c(p)|x-y|_1\big).
-$$ De plus, $c(p)$ tend vers infini quand $p$ tends vers 1.
+$$\forall p > \tilde{p},\,\exists c(p)>0,\, \forall x,y \in \Lambda,\, \forall t \geqslant 0\quad P(x\overset{0,t}{\longleftrightarrow} y)\leqslant \exp\big(-c(p)|x-y|_1\big).
+$$ De plus, la constante $c(p)$ tend vers infini quand $p$ tend vers 1.
 \end{thm}
 \begin{proof}
-Notons $l = |x-y|_1$. Remarquons d'abord qu'un chemin espace-temps qui relie $x,y$ est nécessairement de longueur supérieure à $l$. De plus, par les propositions \ref{ocdis} et \ref{imp}, nous pouvons extraire un chemin d'occurrence disjointe et impatient qui relie $x$ à $y$ entre $0$ et $t$. Or la probabilité qu'un chemin qui vit un temps $t$ est bornée par $\exp(-c'(p)t)$, nous pouvons considérer le cas où $t\leqslant \kappa l \leqslant \kappa |\Lambda|$ avec $\kappa$ une constante arbitraire strictement positive.  Nous avons l'inégalité
+Notons $l = |x-y|_1$. Remarquons d'abord qu'un chemin espace-temps qui relie $x$ à $y$ est nécessairement de longueur supérieure à $l$. De plus, par les propositions \ref{ocdis} et \ref{imp}, nous pouvons extraire d'un tel chemin un chemin d'occurrence disjointe et impatient qui relie $x$ à $y$ entre $0$ et $t$. Or la probabilité qu'un chemin vive un temps $t$ est bornée par $\exp(-c'(p)t)$, nous pouvons considérer le cas où $t\leqslant \kappa l \leqslant \kappa |\Lambda|$ avec $\kappa$ une constante arbitraire strictement positive.  Nous avons l'inégalité
 \begin{align*}
-P(x\overset{0,t}{\longleftrightarrow}& y)=P\left(\begin{array}{c} \text{il existe }\gamma \text{ d'occurrence disjointe et}\\\text{impatient qui relie } x\text{ à }\text{ entre }0\text{ et }\kappa l\end{array}\right) + \exp(-c'(p)\kappa l)\\
+P(x\overset{0,t}{\longleftrightarrow}& y)=P\left(\begin{array}{c} \text{il existe }\gamma \text{ d'occurrence disjointe et}\\\text{impatient qui relie } x\text{ à }y\text{ entre }0\text{ et }\kappa l\end{array}\right) + \exp(-c'(p)\kappa l)\\
 \leqslant& \sum_{n\geqslant l}P\left(\begin{array}{c} \text{il existe }\gamma \text{ d'occurrence disjointe}\\\text{et impatient qui relie } x\text{ à }y\text{ de}\\ \text{longueur }n\text{ entre }0\text{ et }\kappa l\end{array}\right) + \exp(-c'(p)\kappa l)\\
 \leqslant& \sum_{n\geqslant l} \exp\left(2n\kappa+\frac{n}{2}\ln(3-3p)\right) + \exp(-c'(p)\kappa l).
 \end{align*}
-Nous choisissons $\tilde{p}$ telle que $$\kappa+\frac{\ln(3-3\tilde{p})}{2} = 0.$$ Nous avons donc, pour tout $p>\tilde{p}$,
+Nous choisissons $\tilde{p}$ tel que $$\kappa+\frac{\ln(3-3\tilde{p})}{2} = 0.$$ Nous avons donc, pour tout $p>\tilde{p}$,
 \begin{multline*} \sum_{n\geqslant l} \exp\big(2n\kappa+\frac{n}{2}\ln(3-3p)\big) + \exp(-c'(p)\kappa l) \\
 \leqslant \frac{\exp(l(\kappa+\frac{\ln(3-3p)}{2}))}{1-\exp(\kappa+\frac{\ln(3-3p)}{2})}+\exp(-c'(p)\kappa l)\leqslant \exp(-c(p)l)
 \end{multline*}
